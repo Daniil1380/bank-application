@@ -19,6 +19,21 @@ public class Bank {
                 '}';
     }
 
+    public BankOperation createOperation(Person person, OperationType operationType, double amount) {
+        if (person == null) {
+            return null;
+        }
+
+        if (person.getCategory() == AgeCategory.CHILD
+                || (person.getCategory() == AgeCategory.TEEN && operationType != OperationType.DEBIT)) {
+            return null;
+        }
+
+        BankOperation bankOperation = new BankOperation(0, amount, id, person.getId(), operationType);
+
+        return bankOperation;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

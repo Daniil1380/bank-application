@@ -8,10 +8,11 @@ public class Person {
 
     private AgeCategory category;
 
-    public Person(long id, String name, AgeCategory category) {
+    public Person(long id, String name, int age) {
         this.id = id;
         this.name = name;
-        this.category = category;
+        this.category = AgeCategory.getCategoryByAge(age);
+
     }
 
     @Override
