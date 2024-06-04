@@ -7,8 +7,13 @@ public class Main {
 
         CreditCalculator calculator = new CreditCalculator();
 
+        double credit = calculator.calculate(bankOperationCredit, 2);
+        double debit = calculator.calculate(bankOperationDebit, 10);
+        double mortgage = calculator.calculate(bankOperationMortgage, 10);
 
-
+        System.out.println(credit);
+        System.out.println(debit);
+        System.out.println(mortgage);
 
     }
 }
