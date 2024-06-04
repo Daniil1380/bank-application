@@ -12,7 +12,6 @@ public class Person {
         this.id = id;
         this.name = name;
         this.category = AgeCategory.getCategoryByAge(age);
-
     }
 
     @Override

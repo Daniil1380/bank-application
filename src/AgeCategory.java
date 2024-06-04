@@ -23,7 +23,7 @@ public enum AgeCategory {
     }
 
     public static AgeCategory getCategoryByAge(int age) {
-        AgeCategory[] categories = AgeCategory.values();
+        AgeCategory[] categories = AgeCategory.values(); //метод, с помощью которого вы получает массив из всех элементов енама
         for (int i = 0; i < categories.length; i++) {
             AgeCategory ageCategory = categories[i];
             if (age >= ageCategory.startPeriod && age < ageCategory.endPeriod) {
