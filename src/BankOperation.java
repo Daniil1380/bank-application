@@ -19,19 +19,11 @@ public class BankOperation {
     }
 
     public double calculateCreditRate() {
-        if (type == OperationType.CREDIT) {
-            return 1.06;
+        if (type != null) {
+            return type.getCreditRate();
         }
 
-        if (type == OperationType.DEBIT) {
-            return 1.04;
-        }
-
-        if (type == OperationType.MORTGAGE) {
-            return 1.05;
-        }
-
-        return 1.00;
+        return OperationType.UNKNOWN.getCreditRate();
     }
 
 
