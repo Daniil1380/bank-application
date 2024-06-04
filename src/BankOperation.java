@@ -26,7 +26,19 @@ public class BankOperation {
         return OperationType.UNKNOWN.getCreditRate();
     }
 
-
+    public void printInfo() {
+        switch (type) {
+            case DEBIT:
+                System.out.println("Это мы положили деньги в банк");
+                break;
+            case MORTGAGE:
+                System.out.println("Ура, я живу не на улице");
+                break;
+            case CREDIT:
+                System.out.println("Кредит, ок");
+                break;
+        }
+    }
 
     @Override
     public String toString() {

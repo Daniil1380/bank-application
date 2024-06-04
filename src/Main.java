@@ -15,5 +15,9 @@ public class Main {
         System.out.println(debit);
         System.out.println(mortgage);
 
+        bankOperationCredit.printInfo();
+        bankOperationDebit.printInfo();
+        bankOperationMortgage.printInfo();
+
     }
 }
